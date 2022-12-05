@@ -1,0 +1,273 @@
+INFO:root:*** PARAMETERS ***
+INFO:root:{'adj_mat_time_window': 5,
+ 'class_weights': [0.05, 0.95],
+ 'comments': ['comments'],
+ 'data': 'seir',
+ 'data_loading_params': {'batch_size': 1, 'num_workers': 0},
+ 'dev_proportion': 0.2,
+ 'device': 'cuda',
+ 'early_stop_patience': 50,
+ 'eval_after_epochs': 6,
+ 'gcn_parameters': {'cls_feats': 1024,
+                    'cls_feats_max': 1024,
+                    'cls_feats_min': 100,
+                    'feats_per_node': 100,
+                    'feats_per_node_max': 256,
+                    'feats_per_node_min': 50,
+                    'k_top_grcu': 200,
+                    'layer_1_feats': 51,
+                    'layer_1_feats_max': 200,
+                    'layer_1_feats_min': 10,
+                    'layer_2_feats': 51,
+                    'layer_2_feats_same_as_l1': True,
+                    'lstm_l1_feats': 157,
+                    'lstm_l1_feats_max': 200,
+                    'lstm_l1_feats_min': 10,
+                    'lstm_l1_layers': 1,
+                    'lstm_l2_feats': 157,
+                    'lstm_l2_feats_same_as_l1': True,
+                    'lstm_l2_layers': 1,
+                    'num_layers': 2},
+ 'learning_rate': 0.005,
+ 'learning_rate_max': 0.1,
+ 'learning_rate_min': 0.0001,
+ 'model': 'egcn_o',
+ 'negative_mult_test': 20,
+ 'negative_mult_training': 10,
+ 'num_epochs': 100,
+ 'num_hist_steps': 5,
+ 'num_hist_steps_max': 10,
+ 'num_hist_steps_min': 2,
+ 'rank': 0,
+ 'save_node_embeddings': False,
+ 'seed': 1234,
+ 'seir_args': <utils.Namespace object at 0x7fb422a7fdc0>,
+ 'smart_neg_sampling': True,
+ 'steps_accum_gradients': 1,
+ 'target_class': 1,
+ 'target_measure': 'MAP',
+ 'task': 'link_pred',
+ 'train_proportion': 0.7,
+ 'use_1_hot_node_feats': True,
+ 'use_2_hot_node_feats': False,
+ 'use_cuda': True,
+ 'use_logfile': True,
+ 'wsize': 1}
+INFO:root:
+INFO:root:################ TRAIN epoch 0 ###################
+INFO:root:TRAIN mean losses tensor(0.0859, device='cuda:0')
+INFO:root:TRAIN mean errors 0.9078279137611389
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.10710266195732475
+INFO:root:TRAIN tp {0: tensor(1581, device='cuda:0'), 1: tensor(110659, device='cuda:0')},fn {0: tensor(1105439, device='cuda:0'), 1: tensor(43, device='cuda:0')},fp {0: tensor(43, device='cuda:0'), 1: tensor(1105439, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.0922 - recall 0.0922 - f1 0.0922 
+INFO:root:TRAIN measures for class 0 - precision 0.9735 - recall 0.0014 - f1 0.0029 
+INFO:root:TRAIN measures for class 1 - precision 0.0910 - recall 0.9996 - f1 0.1668 
+INFO:root:TRAIN measures@10 microavg - precision 0.2895 - recall 0.0000 - f1 0.0001 
+INFO:root:TRAIN measures@10 for class 0 - precision 0.9800 - recall 0.0000 - f1 0.0001 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.0429 - recall 0.0001 - f1 0.0001 
+INFO:root:TRAIN measures@100 microavg - precision 0.2592 - recall 0.0004 - f1 0.0007 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.9797 - recall 0.0003 - f1 0.0006 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.0821 - recall 0.0010 - f1 0.0021 
+INFO:root:TRAIN measures@1000 microavg - precision 0.1822 - recall 0.0023 - f1 0.0046 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.9735 - recall 0.0014 - f1 0.0029 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.0904 - recall 0.0114 - f1 0.0203 
+INFO:root:TRAIN Total epoch time: 5.673409136943519
+INFO:root:################ TRAIN epoch 1 ###################
+INFO:root:TRAIN mean losses tensor(0.0830, device='cuda:0')
+INFO:root:TRAIN mean errors 0.6926630139350891
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.1281895040715447
+INFO:root:TRAIN tp {0: tensor(267122, device='cuda:0'), 1: tensor(107129, device='cuda:0')},fn {0: tensor(839898, device='cuda:0'), 1: tensor(3573, device='cuda:0')},fp {0: tensor(3573, device='cuda:0'), 1: tensor(839898, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.3073 - recall 0.3073 - f1 0.3073 
+INFO:root:TRAIN measures for class 0 - precision 0.9868 - recall 0.2413 - f1 0.3878 
+INFO:root:TRAIN measures for class 1 - precision 0.1131 - recall 0.9677 - f1 0.2026 
+INFO:root:TRAIN measures@10 microavg - precision 0.5393 - recall 0.0001 - f1 0.0002 
+INFO:root:TRAIN measures@10 for class 0 - precision 1.0000 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.0786 - recall 0.0001 - f1 0.0002 
+INFO:root:TRAIN measures@100 microavg - precision 0.5429 - recall 0.0012 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.9964 - recall 0.0013 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.0893 - recall 0.0011 - f1 0.0022 
+INFO:root:TRAIN measures@1000 microavg - precision 0.5488 - recall 0.0126 - f1 0.0247 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.9941 - recall 0.0126 - f1 0.0248 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.1035 - recall 0.0131 - f1 0.0232 
+INFO:root:TRAIN Total epoch time: 3.639278292655945
+INFO:root:################ TRAIN epoch 2 ###################
+INFO:root:TRAIN mean losses tensor(0.0856, device='cuda:0')
+INFO:root:TRAIN mean errors 0.7307554483413696
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.1265136669241399
+INFO:root:TRAIN tp {0: tensor(223182, device='cuda:0'), 1: tensor(104683, device='cuda:0')},fn {0: tensor(883838, device='cuda:0'), 1: tensor(6019, device='cuda:0')},fp {0: tensor(6019, device='cuda:0'), 1: tensor(883838, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.2692 - recall 0.2692 - f1 0.2692 
+INFO:root:TRAIN measures for class 0 - precision 0.9737 - recall 0.2016 - f1 0.3340 
+INFO:root:TRAIN measures for class 1 - precision 0.1059 - recall 0.9456 - f1 0.1905 
+INFO:root:TRAIN measures@10 microavg - precision 0.5815 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 0 - precision 1.0000 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.1308 - recall 0.0002 - f1 0.0003 
+INFO:root:TRAIN measures@100 microavg - precision 0.5793 - recall 0.0013 - f1 0.0026 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.9907 - recall 0.0013 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.1362 - recall 0.0016 - f1 0.0032 
+INFO:root:TRAIN measures@1000 microavg - precision 0.5517 - recall 0.0115 - f1 0.0226 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.9928 - recall 0.0112 - f1 0.0221 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.1283 - recall 0.0151 - f1 0.0270 
+INFO:root:TRAIN Total epoch time: 3.5059274062514305
+INFO:root:################ TRAIN epoch 3 ###################
+INFO:root:TRAIN mean losses tensor(0.0811, device='cuda:0')
+INFO:root:TRAIN mean errors 0.6141352653503418
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.13958049514918092
+INFO:root:TRAIN tp {0: tensor(365015, device='cuda:0'), 1: tensor(104861, device='cuda:0')},fn {0: tensor(742005, device='cuda:0'), 1: tensor(5841, device='cuda:0')},fp {0: tensor(5841, device='cuda:0'), 1: tensor(742005, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.3859 - recall 0.3859 - f1 0.3859 
+INFO:root:TRAIN measures for class 0 - precision 0.9842 - recall 0.3297 - f1 0.4940 
+INFO:root:TRAIN measures for class 1 - precision 0.1238 - recall 0.9472 - f1 0.2190 
+INFO:root:TRAIN measures@10 microavg - precision 0.5571 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 0 - precision 1.0000 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.1143 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@100 microavg - precision 0.5650 - recall 0.0013 - f1 0.0026 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.9957 - recall 0.0013 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.1343 - recall 0.0017 - f1 0.0034 
+INFO:root:TRAIN measures@1000 microavg - precision 0.5610 - recall 0.0129 - f1 0.0252 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.9919 - recall 0.0125 - f1 0.0248 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.1301 - recall 0.0165 - f1 0.0292 
+INFO:root:TRAIN Total epoch time: 3.9652321143075824
+INFO:root:################ TRAIN epoch 4 ###################
+INFO:root:TRAIN mean losses tensor(0.0769, device='cuda:0')
+INFO:root:TRAIN mean errors 0.6044704914093018
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.13892586988698877
+INFO:root:TRAIN tp {0: tensor(375114, device='cuda:0'), 1: tensor(106531, device='cuda:0')},fn {0: tensor(731906, device='cuda:0'), 1: tensor(4171, device='cuda:0')},fp {0: tensor(4171, device='cuda:0'), 1: tensor(731906, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.3955 - recall 0.3955 - f1 0.3955 
+INFO:root:TRAIN measures for class 0 - precision 0.9890 - recall 0.3389 - f1 0.5048 
+INFO:root:TRAIN measures for class 1 - precision 0.1271 - recall 0.9623 - f1 0.2245 
+INFO:root:TRAIN measures@10 microavg - precision 0.5464 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 0 - precision 1.0000 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.0929 - recall 0.0001 - f1 0.0002 
+INFO:root:TRAIN measures@100 microavg - precision 0.5425 - recall 0.0012 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.9943 - recall 0.0013 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.0907 - recall 0.0011 - f1 0.0023 
+INFO:root:TRAIN measures@1000 microavg - precision 0.5483 - recall 0.0126 - f1 0.0246 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.9906 - recall 0.0125 - f1 0.0247 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.1061 - recall 0.0134 - f1 0.0238 
+INFO:root:TRAIN Total epoch time: 3.1660368172451854
+INFO:root:################ TRAIN epoch 5 ###################
+INFO:root:TRAIN mean losses tensor(0.0789, device='cuda:0')
+INFO:root:TRAIN mean errors 0.6213594079017639
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.14082981988569496
+INFO:root:TRAIN tp {0: tensor(357161, device='cuda:0'), 1: tensor(103918, device='cuda:0')},fn {0: tensor(749859, device='cuda:0'), 1: tensor(6784, device='cuda:0')},fp {0: tensor(6784, device='cuda:0'), 1: tensor(749859, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.3786 - recall 0.3786 - f1 0.3786 
+INFO:root:TRAIN measures for class 0 - precision 0.9814 - recall 0.3226 - f1 0.4856 
+INFO:root:TRAIN measures for class 1 - precision 0.1217 - recall 0.9387 - f1 0.2155 
+INFO:root:TRAIN measures@10 microavg - precision 0.5571 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 0 - precision 1.0000 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.1143 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@100 microavg - precision 0.5432 - recall 0.0012 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.9979 - recall 0.0013 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.0886 - recall 0.0011 - f1 0.0022 
+INFO:root:TRAIN measures@1000 microavg - precision 0.5500 - recall 0.0126 - f1 0.0247 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.9906 - recall 0.0125 - f1 0.0247 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.1094 - recall 0.0138 - f1 0.0246 
+INFO:root:TRAIN Total epoch time: 3.400436433032155
+INFO:root:################ TRAIN epoch 6 ###################
+INFO:root:TRAIN mean losses tensor(0.0762, device='cuda:0')
+INFO:root:TRAIN mean errors 0.5957377552986145
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.13890414984710675
+INFO:root:TRAIN tp {0: tensor(385904, device='cuda:0'), 1: tensor(106375, device='cuda:0')},fn {0: tensor(721116, device='cuda:0'), 1: tensor(4327, device='cuda:0')},fp {0: tensor(4327, device='cuda:0'), 1: tensor(721116, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.4043 - recall 0.4043 - f1 0.4043 
+INFO:root:TRAIN measures for class 0 - precision 0.9889 - recall 0.3486 - f1 0.5155 
+INFO:root:TRAIN measures for class 1 - precision 0.1286 - recall 0.9609 - f1 0.2268 
+INFO:root:TRAIN measures@10 microavg - precision 0.5571 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 0 - precision 1.0000 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.1143 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@100 microavg - precision 0.5596 - recall 0.0013 - f1 0.0026 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.9979 - recall 0.0013 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.1214 - recall 0.0015 - f1 0.0030 
+INFO:root:TRAIN measures@1000 microavg - precision 0.5593 - recall 0.0129 - f1 0.0251 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.9916 - recall 0.0125 - f1 0.0248 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.1269 - recall 0.0161 - f1 0.0285 
+INFO:root:TRAIN Total epoch time: 3.31925215665251
+INFO:root:################ TRAIN epoch 7 ###################
+INFO:root:TRAIN mean losses tensor(0.0748, device='cuda:0')
+INFO:root:TRAIN mean errors 0.5252758860588074
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.13981294765478108
+INFO:root:TRAIN tp {0: tensor(473975, device='cuda:0'), 1: tensor(104107, device='cuda:0')},fn {0: tensor(633045, device='cuda:0'), 1: tensor(6595, device='cuda:0')},fp {0: tensor(6595, device='cuda:0'), 1: tensor(633045, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.4747 - recall 0.4747 - f1 0.4747 
+INFO:root:TRAIN measures for class 0 - precision 0.9863 - recall 0.4282 - f1 0.5971 
+INFO:root:TRAIN measures for class 1 - precision 0.1412 - recall 0.9404 - f1 0.2456 
+INFO:root:TRAIN measures@10 microavg - precision 0.5714 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 0 - precision 1.0000 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.1429 - recall 0.0002 - f1 0.0004 
+INFO:root:TRAIN measures@100 microavg - precision 0.5514 - recall 0.0013 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.9957 - recall 0.0013 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.1071 - recall 0.0014 - f1 0.0027 
+INFO:root:TRAIN measures@1000 microavg - precision 0.5522 - recall 0.0127 - f1 0.0248 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.9920 - recall 0.0125 - f1 0.0248 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.1124 - recall 0.0142 - f1 0.0252 
+INFO:root:TRAIN Total epoch time: 3.3350013913586736
+INFO:root:################ VALID epoch 7 ###################
+INFO:root:VALID mean losses tensor(0.0652, device='cuda:0')
+INFO:root:VALID mean errors 0.6706365942955017
+INFO:root:VALID mean MRR 0.13781916334623573 - mean MAP 0.05734592695370112
+INFO:root:VALID tp {0: tensor(57352, device='cuda:0'), 1: tensor(9186, device='cuda:0')},fn {0: tensor(135048, device='cuda:0'), 1: tensor(434, device='cuda:0')},fp {0: tensor(434, device='cuda:0'), 1: tensor(135048, device='cuda:0')}
+INFO:root:VALID measures microavg - precision 0.3294 - recall 0.3294 - f1 0.3294 
+INFO:root:VALID measures for class 0 - precision 0.9925 - recall 0.2981 - f1 0.4585 
+INFO:root:VALID measures for class 1 - precision 0.0637 - recall 0.9549 - f1 0.1194 
+INFO:root:VALID measures@10 microavg - precision 0.5000 - recall 0.0003 - f1 0.0006 
+INFO:root:VALID measures@10 for class 0 - precision 1.0000 - recall 0.0003 - f1 0.0006 
+INFO:root:VALID measures@10 for class 1 - precision 0.0000 - recall 0.0000 - f1 0.0000 
+INFO:root:VALID measures@100 microavg - precision 0.5058 - recall 0.0030 - f1 0.0060 
+INFO:root:VALID measures@100 for class 0 - precision 0.9950 - recall 0.0031 - f1 0.0062 
+INFO:root:VALID measures@100 for class 1 - precision 0.0167 - recall 0.0010 - f1 0.0020 
+INFO:root:VALID measures@1000 microavg - precision 0.5192 - recall 0.0308 - f1 0.0582 
+INFO:root:VALID measures@1000 for class 0 - precision 0.9933 - recall 0.0310 - f1 0.0601 
+INFO:root:VALID measures@1000 for class 1 - precision 0.0450 - recall 0.0281 - f1 0.0346 
+INFO:root:VALID Total epoch time: 63.92651038430631
+INFO:root:################ TEST epoch 7 ###################
+INFO:root:TEST batch 1 / 3 - partial error 0.5674 - partial loss 0.0612 - partial MRR  0.1568 - partial MAP 0.0614
+INFO:root:TEST batch 1 / 3 -  partial tp {0: tensor(18770, device='cuda:0'), 1: tensor(2124, device='cuda:0')},fn {0: tensor(27230, device='cuda:0'), 1: tensor(176, device='cuda:0')},fp {0: tensor(176, device='cuda:0'), 1: tensor(27230, device='cuda:0')}
+INFO:root:TEST batch 1 / 3 - measures partial microavg - precision 0.4326 - recall 0.4326 - f1 0.4326 
+INFO:root:TEST batch 1 / 3 - measures partial for class 0 - precision 0.9907 - recall 0.4080 - f1 0.5780 
+INFO:root:TEST batch 1 / 3 - measures partial for class 1 - precision 0.0724 - recall 0.9235 - f1 0.1342 
+INFO:root:TEST batch 1 / 3 - Batch time 10 
+INFO:root:TEST batch 2 / 3 - partial error 0.5686 - partial loss 0.0606 - partial MRR  0.1582 - partial MAP 0.0631
+INFO:root:TEST batch 2 / 3 -  partial tp {0: tensor(16021, device='cuda:0'), 1: tensor(1859, device='cuda:0')},fn {0: tensor(23579, device='cuda:0'), 1: tensor(121, device='cuda:0')},fp {0: tensor(121, device='cuda:0'), 1: tensor(23579, device='cuda:0')}
+INFO:root:TEST batch 2 / 3 - measures partial microavg - precision 0.4300 - recall 0.4300 - f1 0.4300 
+INFO:root:TEST batch 2 / 3 - measures partial for class 0 - precision 0.9925 - recall 0.4046 - f1 0.5748 
+INFO:root:TEST batch 2 / 3 - measures partial for class 1 - precision 0.0731 - recall 0.9389 - f1 0.1356 
+INFO:root:TEST batch 2 / 3 - Batch time 10 
+INFO:root:TEST batch 3 / 3 - partial error 0.5711 - partial loss 0.0603 - partial MRR  0.1683 - partial MAP 0.0643
+INFO:root:TEST batch 3 / 3 -  partial tp {0: tensor(13434, device='cuda:0'), 1: tensor(1617, device='cuda:0')},fn {0: tensor(20486, device='cuda:0'), 1: tensor(79, device='cuda:0')},fp {0: tensor(79, device='cuda:0'), 1: tensor(20486, device='cuda:0')}
+INFO:root:TEST batch 3 / 3 - measures partial microavg - precision 0.4226 - recall 0.4226 - f1 0.4226 
+INFO:root:TEST batch 3 / 3 - measures partial for class 0 - precision 0.9942 - recall 0.3960 - f1 0.5664 
+INFO:root:TEST batch 3 / 3 - measures partial for class 1 - precision 0.0732 - recall 0.9534 - f1 0.1359 
+INFO:root:TEST batch 3 / 3 - Batch time 10 
+INFO:root:TEST mean losses tensor(0.0603, device='cuda:0')
+INFO:root:TEST mean errors 0.5711018443107605
+INFO:root:TEST mean MRR 0.16834488054461655 - mean MAP 0.06430967414371931
+INFO:root:TEST tp {0: tensor(48225, device='cuda:0'), 1: tensor(5600, device='cuda:0')},fn {0: tensor(71295, device='cuda:0'), 1: tensor(376, device='cuda:0')},fp {0: tensor(376, device='cuda:0'), 1: tensor(71295, device='cuda:0')}
+INFO:root:TEST measures microavg - precision 0.4289 - recall 0.4289 - f1 0.4289 
+INFO:root:TEST measures for class 0 - precision 0.9923 - recall 0.4035 - f1 0.5737 
+INFO:root:TEST measures for class 1 - precision 0.0728 - recall 0.9371 - f1 0.1351 
+INFO:root:TEST measures@10 microavg - precision 0.5667 - recall 0.0003 - f1 0.0005 
+INFO:root:TEST measures@10 for class 0 - precision 1.0000 - recall 0.0003 - f1 0.0005 
+INFO:root:TEST measures@10 for class 1 - precision 0.1333 - recall 0.0007 - f1 0.0013 
+INFO:root:TEST measures@100 microavg - precision 0.5367 - recall 0.0026 - f1 0.0051 
+INFO:root:TEST measures@100 for class 0 - precision 1.0000 - recall 0.0025 - f1 0.0050 
+INFO:root:TEST measures@100 for class 1 - precision 0.0733 - recall 0.0037 - f1 0.0070 
+INFO:root:TEST measures@1000 microavg - precision 0.5233 - recall 0.0250 - f1 0.0478 
+INFO:root:TEST measures@1000 for class 0 - precision 0.9983 - recall 0.0251 - f1 0.0489 
+INFO:root:TEST measures@1000 for class 1 - precision 0.0483 - recall 0.0243 - f1 0.0323 
+INFO:root:TEST Total epoch time: 31.955166938714683
+INFO:root:################ TRAIN epoch 8 ###################
+INFO:root:TRAIN mean losses tensor(0.0860, device='cuda:0')
+INFO:root:TRAIN mean errors 0.5803409814834595
+INFO:root:TRAIN mean MRR 0.0 - mean MAP 0.1365369002187776
+INFO:root:TRAIN tp {0: tensor(406181, device='cuda:0'), 1: tensor(104847, device='cuda:0')},fn {0: tensor(700839, device='cuda:0'), 1: tensor(5855, device='cuda:0')},fp {0: tensor(5855, device='cuda:0'), 1: tensor(700839, device='cuda:0')}
+INFO:root:TRAIN measures microavg - precision 0.4197 - recall 0.4197 - f1 0.4197 
+INFO:root:TRAIN measures for class 0 - precision 0.9858 - recall 0.3669 - f1 0.5348 
+INFO:root:TRAIN measures for class 1 - precision 0.1301 - recall 0.9471 - f1 0.2288 
+INFO:root:TRAIN measures@10 microavg - precision 0.5643 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 0 - precision 1.0000 - recall 0.0001 - f1 0.0003 
+INFO:root:TRAIN measures@10 for class 1 - precision 0.1286 - recall 0.0002 - f1 0.0003 
+INFO:root:TRAIN measures@100 microavg - precision 0.5436 - recall 0.0012 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 0 - precision 0.9971 - recall 0.0013 - f1 0.0025 
+INFO:root:TRAIN measures@100 for class 1 - precision 0.0900 - recall 0.0011 - f1 0.0022 
+INFO:root:TRAIN measures@1000 microavg - precision 0.5546 - recall 0.0127 - f1 0.0249 
+INFO:root:TRAIN measures@1000 for class 0 - precision 0.9958 - recall 0.0126 - f1 0.0248 
+INFO:root:TRAIN measures@1000 for class 1 - precision 0.1148 - recall 0.0145 - f1 0.0258 
+INFO:root:TRAIN Total epoch time: 3.370170562528074
+INFO:root:################ VALID epoch 8 ###################
