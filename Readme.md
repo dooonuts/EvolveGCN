@@ -5,19 +5,7 @@ This repository contains the code for [EvolveGCN: Evolving Graph Convolutional N
 
 ## Data
 
-7 datasets were used in the paper:
-
-- stochastic block model: See the 'data' folder. Untar the file for use.
-- bitcoin OTC: Downloadable from http://snap.stanford.edu/data/soc-sign-bitcoin-otc.html
-- bitcoin Alpha: Downloadable from http://snap.stanford.edu/data/soc-sign-bitcoin-alpha.html
-- uc_irvine: Downloadable from http://konect.uni-koblenz.de/networks/opsahl-ucsocial
-- autonomous systems: Downloadable from http://snap.stanford.edu/data/as-733.html
-- reddit hyperlink network: Downloadable from http://snap.stanford.edu/data/soc-RedditHyperlinks.html
-- elliptic: A preprocessed version of https://www.kaggle.com/ellipticco/elliptic-data-set is provided in the following link: ~~https://ibm.box.com/s/j04m8lwoqktjixke2gj7lgllrvvdidme.~~ Untar the file in the 'data' folder for use.
-
-Update on elliptic: The box link is no longer valid. Please see the [instruction](elliptic_construction.md) to manually prepare the preprocessed version.
- 
-For downloaded data sets please place them in the 'data' folder.
+Datasets are generated from the https://github.com/TieJean/ECE381K-Epidemics-GNN/tree/SEIR_Modeling_M3 project. This will generate a new infection link edges file that should be moved into the data folder.
 
 ## Requirements
   * PyTorch 1.0 or higher
@@ -52,12 +40,12 @@ sudo docker run -ti  --gpus all -v $(pwd):/evolveGCN  gcn_env:latest
 
 This will start a bash session in the container.
 
-## Usage
+## Usage - Classification
 
-Set --config_file with a yaml configuration file to run the experiments. For example:
+Set --config_file with a yaml configuration file to run the experiments. For SEIR prediction, please run:
 
 ```sh
-python run_exp.py --config_file ./experiments/parameters_example.yaml
+python run_exp.py --config_file ./experiments/parameters_seir_egcn_o.yaml
 ```
 
 Most of the parameters in the yaml configuration file are self-explanatory. For hyperparameters tuning, it is possible to set a certain parameter to 'None' and then set a min and max value. Then, each run will pick a random value within the boundaries (for example: 'learning_rate', 'learning_rate_min' and 'learning_rate_max').
@@ -68,6 +56,10 @@ Setting 'use_logfile' to True in the configuration yaml will output a file, in t
 python log_analyzer.py log/filename.log
 ```
 
+## Usage - Prediction
+```sh
+python classify.py --config_file ./experiments/parameters_seir_egcn_o_test.yaml
+```
 
 ## Reference
 
